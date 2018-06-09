@@ -1,0 +1,26 @@
+.root-post .control {
+    display: none;
+}
+
+.page-content {
+  padding: 0px;
+}
+
+.at-error {
+  height: auto !important;
+  width: 100%;
+  padding:5px;
+  margin: 10px;
+}
+
+.create-post, .at-form {
+  width: 33%;
+  margin: 0 auto 0 auto;
+}
+
+.front-page-center {
+    text-align: center;
+    position: absolute;
+    left: 20vw;
+    width: 60vw;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "agora-meteor-basic",
+  "dependencies": {
+    "@babel/runtime": "^7.0.0-beta.48",
+    "bcrypt": "^2.0.1",
+    "meteor-node-stubs": "^0.4.1"
+  },
+  "keywords": [
+    "agora",
+    "forum"
+  ],
+  "author": "Angle",
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.js",
+      "server": "server/main.js"
+    }
+  }
+}
