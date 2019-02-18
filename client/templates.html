@@ -1,15 +1,15 @@
 <template name="about">
-    <h1 align="center">Agora Forum Example App</h1>
+    <h1 align="center">About Agora</h1>
     <div class="front-page-center">
 
         This page is for testing the Agora forum application. Please keep in
-        mind that this application is in it's infancy,and as such has very
-        little security. Do not use a password you are using anywhere else, as
+        mind that this application is in it's infancy,and as such likely has very
+        poor security. Do not use a password you are using anywhere else, as
         it may very well be stolen, and do not post anything you are not
         prepared to see deleted, as database clears will likely be common for
         the foreseeable future. If you wish to report an issue or see what
         future developements are planned, please do so
-        <a href="https://github.com/Agora-Project/agora-meteor/issues">here</a>.
+        <a href="https://gitlab.com/Agora-Project/agora-meteor/issues">here</a>.
 
         <h2 align="center">What is Agora?</h2>
 
@@ -37,9 +37,8 @@
         <a href="https://gitlab.com/Agora-Project/agora-meteor-basic">here</a>
         (Test site using said forum).
 
-        If you wish to contact or discuss the forum, please create an account
-        and comment under the "Meta Agora" forum, or send a message to
-        <a href="https://github.com/Angular-Angel">Angular-Angel</a> on github.
+        If you wish to submit an bug report or a suggestion for improvement, please
+        place an issue on one of the repositories above.
 
         Finally, if you wish to contribute, there are several different ways.
         First and foremost, simply using the forum, reporting bugs, and making
@@ -48,7 +47,18 @@
         features is alos much appreciated, if you wish to do this please contact
         me and we can work things out. And, last but not least, if you wish to
         contribute financially, I have a
-        <a href="https://www.patreon.com/AgoraForum">patreon</a>.
+        <a href="https://liberapay.com/Angle/">LibrePay</a>.
+
+
+        <h2 align="center">About Me</h2>
+
+        My name is Gregory Sartucci and I am very concerned for the future. I
+        don't think our civilization is prepared to face the challenges ahead of it,
+        as we are today. In order to deal with climate change, A.I., and other
+        problems ahead of us, I think we need better methods to communicate and
+        discuss complicaqted ideas. That is why I am working on this project.
+
+        If you wish to contact me, please send a message to Ribbonwing [at] gmail [dot] com.
 
     </div>
 </template>
@@ -89,7 +99,7 @@
                     {{#if isInRole 'moderator'}}
                         <a class="mdl-navigation__link" href="/users">Users</a>
                     {{/if }}
-                    
+
                     {{#if currentUser }}
                         <a class="mdl-navigation__link" href="/change-password">Change password</a>
                     {{/if }}
