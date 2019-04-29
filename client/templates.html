@@ -63,53 +63,36 @@
     </div>
 </template>
 
-<template name="layout">
-    <div>
-        <!-- Always shows a header, even in smaller screens. -->
-        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-            <header class="mdl-layout__header">
-                <div class="mdl-layout__header-row">
-                    <!-- Add spacer, to align navigation to the right -->
-                    <div class="mdl-layout-spacer"></div>
+<template name="customLayout">
+    <div class="main-layout-full">
+        <div class="main-layout-header">
+            <div class="main-layout-header-row">
+                <span class="main-layout-title main-layout-header-item">Agora Project</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="main-layout-header-spacer"></div>
 
-                    {{#if currentUser }}
-                        <a class="mdl-navigation__link" href="/home">Home</a>
-                    {{/if }}
+                {{#if currentUser }}
+                    <a class="main-layout-header-link main-layout-header-item" href="/home">Home</a>
+                {{/if }}
 
-                    <a class="mdl-navigation__link" href="/">Recent Posts</a>
-                    <a class="mdl-navigation__link" href="/federation">Federation</a>
+                <a class="main-layout-header-link main-layout-header-item" href="/">Recent Posts</a>
 
-                    {{#if isInRole 'moderator'}}
-                        <a class="mdl-navigation__link" href="/admin">Admin</a>
-                    {{/if}}
+                <a class="main-layout-header-link main-layout-header-item" href="/about" >About</a>
 
-                    <a class="mdl-navigation__link" href="/about" >About</a>
+                {{#if currentUser }}
+                    <a class="main-layout-header-link main-layout-header-item" href="/user" >Profile</a>
+                {{/if }}
 
-                    {{#if currentUser }}
-                        <a class="mdl-navigation__link" href="/user" >Profile</a>
-                    {{/if }}
+                <a class="main-layout-header-link main-layout-header-item"> {{> loginButtons}} </a>
+            </div>
+            <div class="main-layout-banner">
 
-                    <a class="mdl-navigation__link" href="/sign-in">{{> atNavButton }}</a>
+            </div>
+            <main class="main-layout-content">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                    {{> yield}}
                 </div>
-            </header>
-            <div class="mdl-layout__drawer">
-
-                <span class="mdl-layout-title">Agora Project</span>
-                <nav class="mdl-navigation">
-                    {{#if isInRole 'moderator'}}
-                        <a class="mdl-navigation__link" href="/users">Users</a>
-                    {{/if }}
-
-                    {{#if currentUser }}
-                        <a class="mdl-navigation__link" href="/change-password">Change password</a>
-                    {{/if }}
-                </nav>
-            </div>
-            <main class="mdl-layout__content">
-            <div class="page-content">
-                <!-- Your content goes here -->
-                {{> yield}}
-            </div>
             </main>
         </div>
     </div>
